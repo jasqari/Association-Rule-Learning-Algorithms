@@ -27,11 +27,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     """Load the data"""
-    data_path = (
-        "Sample Data/LIHC-Normal.csv"
-        if args.dataset == "normal"
-        else "Sample Data/LIHC-Overweight.csv"
-    )
+    data_path = "Data/LIHC-Normal.csv" if args.dataset == "normal" else "Data/LIHC-Overweight.csv"
     csvreader = csv.reader(open(data_path))
     data = [row for row in csvreader]
     head = data[0][0]
